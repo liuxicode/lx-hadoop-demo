@@ -26,6 +26,7 @@ public class WordCountRunner {
         job.setJarByClass(com.liuxi.hadoop.WordCountRunner.class);
 
         job.setMapperClass(com.liuxi.hadoop.mapper.WordCountMapper.class);
+        job.setCombinerClass(com.liuxi.hadoop.reducer.WordCombiner.class);
         job.setReducerClass(com.liuxi.hadoop.reducer.WordCountReducer.class);
 
         job.setMapOutputKeyClass(Text.class);
